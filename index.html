@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ХРОНИКИ ИКТ — Интерактивная книга</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-badge">КОМИКС-КНИГА</span>
+      <h1>ХРОНИКИ ИКТ</h1>
+    </div>
+
+    <nav class="chapter-nav" id="chapterNav"></nav>
+
+    <div class="actions">
+      <label class="btn btn-upload" for="photoInput">Загрузить свои фото</label>
+      <input type="file" id="photoInput" accept="image/*" multiple hidden />
+    </div>
+  </header>
+
+  <main class="stage">
+    <button class="nav-arrow prev" id="prevBtn" aria-label="Предыдущая страница">&#10094;</button>
+
+    <div class="book-wrapper">
+      <div class="book" id="book"></div>
+    </div>
+
+    <button class="nav-arrow next" id="nextBtn" aria-label="Следующая страница">&#10095;</button>
+  </main>
+
+  <footer class="bottom-bar">
+    <div class="page-counter" id="pageCounter">Страница 1 из 11</div>
+    <div class="thumbnails" id="thumbnails"></div>
+  </footer>
+
+  <!-- Модальное окно для крупного просмотра кадра -->
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-card">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <div class="lightbox-art" id="lightboxArt"></div>
+      <div class="lightbox-info">
+        <span class="lightbox-chapter" id="lightboxChapter"></span>
+        <h2 id="lightboxTitle"></h2>
+        <p id="lightboxCaption"></p>
+        <div class="lightbox-fact" id="lightboxFact"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
